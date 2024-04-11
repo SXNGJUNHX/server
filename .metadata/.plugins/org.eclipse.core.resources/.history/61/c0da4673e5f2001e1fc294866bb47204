@@ -1,0 +1,21 @@
+package com.test.crawl;
+
+import org.jsoup.Jsoup;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		
+		try {
+			
+			String url = "https://www.moviechart.co.kr/rank/boxoffice";
+			
+			
+			Document doc = Jsoup.connect(url);
+			
+		} catch (Exception e) {
+			System.out.println("Ex02.main");
+			e.printStackTrace();
+		}
+	}
+}

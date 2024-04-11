@@ -1,0 +1,66 @@
+package com.test.api.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import com.test.util.DBUtil;
+
+public class MapDAO {
+	
+	private Connection conn;
+	private Statement stat;
+	private PreparedStatement pstat;
+	private ResultSet rs;
+	
+	public MapDAO() {
+		this.conn = DBUtil.open("192.168.10.47", "mainproject", "java1234");
+		//this.conn = DBUtil.open();
+	}
+
+	public ArrayList<MarkerDTO> list() {
+		
+		try {
+			
+			//ResultSet > (복사) > ArrayList<MarkerDTO>
+			ArrayList<MarkerDTO> list = new ArrayList<MarkerDTO>();
+			
+			
+			
+			
+			
+			
+		} catch (Exception e) {
+			System.out.println("MapDAO.list");
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

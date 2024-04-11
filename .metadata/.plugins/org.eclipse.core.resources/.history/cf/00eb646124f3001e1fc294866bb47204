@@ -1,0 +1,39 @@
+package com.test.todo.test;
+
+import static org.junit.Assert.*;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+
+import org.junit.Ignore;
+import org.junit.jupiter.api.Test;
+
+import com.test.todo.model.TodoDAO;
+import com.test.todo.model.TodoDTO;
+
+class DAOTest {
+
+	@IgnoreI
+	@Test
+	void testAddTodo() {
+		
+		TodoDAO dao = new TodoDAO();
+		int result = dao.add("또 할일입니다.");
+		
+		assertEquals(1, result);
+		
+		
+	}
+	
+	@Test
+	void testListTodo() {
+		
+		TodoDAO dao = new TodoDAO();
+		
+		ArrayList<TodoDTO> list = dao.list();
+		
+		assertNotNull(list);
+		
+	}
+}

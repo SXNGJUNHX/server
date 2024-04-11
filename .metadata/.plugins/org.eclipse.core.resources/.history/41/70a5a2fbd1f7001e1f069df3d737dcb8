@@ -1,0 +1,9 @@
+package com.test.ajax;
+
+import javax.servlet.http.HttpServlet;
+
+public class Ex10Add extends HttpServlet{
+
+	
+	
+}

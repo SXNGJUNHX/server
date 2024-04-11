@@ -1,0 +1,76 @@
+<%@page import="org.jsoup.Jsoup"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	Document doc = Jsoup.connect("https://www.moviechart.co.kr/rank/boxoffice").get();
+
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="http://pinnpublic.dothome.co.kr/cdn/example-min.css">
+<style>
+	table th:nth-child(1){width: 190px;}
+	table th:nth-child(2){width: 50px;}
+	table th:nth-child(3){width: auto;}
+	table th:nth-child(4){width: 120px;}
+	
+	table img {width: 150px;}
+	table td {text-align: center;}
+	table td:nth-child(3) {text-align: left;}
+</style>
+</head>
+<body>
+	<!-- ex03.jsp -->
+	<!-- 순위, 영화명, 누적관객수, 포스터 -->
+	<h1>영화 순위</h1>
+	
+	<table>
+		<tr>
+			<th>포스터</th>
+			<th>순위</th>
+			<th>영화</th>
+			<th>누적관객수</th>
+		</tr>
+		<tr>
+			<td><img src="https://www.moviechart.co.kr/thumb?width=178&height=267&m_code=20234675&source=https://www.moviechart.co.kr/assets/upload/movie/240207133050_4548.jpg"></td>
+			<td>01</td>
+			<td>파묘</td>
+			<td>11,118,957명</td>
+		</tr>
+		<tr>
+			<td><img src="https://www.moviechart.co.kr/thumb?width=178&height=267&m_code=20234675&source=https://www.moviechart.co.kr/assets/upload/movie/240207133050_4548.jpg"></td>
+			<td>01</td>
+			<td>파묘</td>
+			<td>11,118,957명</td>
+		</tr>
+		<tr>
+			<td><img src="https://www.moviechart.co.kr/thumb?width=178&height=267&m_code=20234675&source=https://www.moviechart.co.kr/assets/upload/movie/240207133050_4548.jpg"></td>
+			<td>01</td>
+			<td>파묘</td>
+			<td>11,118,957명</td>
+		</tr>
+		<tr>
+			<td><img src="https://www.moviechart.co.kr/thumb?width=178&height=267&m_code=20234675&source=https://www.moviechart.co.kr/assets/upload/movie/240207133050_4548.jpg"></td>
+			<td>01</td>
+			<td>파묘</td>
+			<td>11,118,957명</td>
+		</tr>
+		<tr>
+			<td><img src="https://www.moviechart.co.kr/thumb?width=178&height=267&m_code=20234675&source=https://www.moviechart.co.kr/assets/upload/movie/240207133050_4548.jpg"></td>
+			<td>01</td>
+			<td>파묘</td>
+			<td>11,118,957명</td>
+		</tr>
+	</table>
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		
+	</script>
+</body>
+</html>

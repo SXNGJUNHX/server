@@ -1,0 +1,7 @@
+package com.test.api.map;
+
+import javax.servlet.http.HttpServlet;
+
+public class Ex01 extends HttpServlet{
+
+}

@@ -1,0 +1,18 @@
+1.Servlet
+2. JSP
+3. Servlet + JSP
+
+
+Servlet
+- 장점 : 자바 기반
+- 단점 : 클라이언트 코드 불편
+
+JSP
+- 장점 : HTML 기반
+- 단점 : 자바 코드 불편
+
+
+Servlet + JSP > 코드 분리(***)
+- 자바 코드 > Servlet에서 작성 
+- 클라이언트 코드 > JSP에서 작성
+

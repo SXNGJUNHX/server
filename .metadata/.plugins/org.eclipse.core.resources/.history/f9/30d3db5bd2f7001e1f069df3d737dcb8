@@ -1,0 +1,7 @@
+package com.test.ajax.model;
+
+public class AddressDTO {
+
+	private String name;
+	
+}

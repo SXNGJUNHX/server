@@ -1,0 +1,28 @@
+package com.test.todo.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.test.todo.model.TodoDAO;
+
+class DAOTest {
+
+	@Test
+	void testAddTodo() {
+		
+		TodoDAO dao = new TodoDAO();
+		int result = dao.add("또 할일입니다.");
+		
+		assertEquals(1, result);
+		
+		
+	}
+	
+	@Test
+	void testListTodo() {
+		
+		TodoDAO dao = new TodoDAO();
+		
+	}
+}

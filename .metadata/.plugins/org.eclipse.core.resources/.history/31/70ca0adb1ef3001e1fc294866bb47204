@@ -1,0 +1,5 @@
+package com.test.todo.model;
+
+public class TodoDTO {
+
+}

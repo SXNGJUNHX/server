@@ -1,0 +1,133 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="http://pinnpublic.dothome.co.kr/cdn/example-min.css">
+<style>
+	div > div { margin-bottom: 5px; }
+</style>
+</head>
+<body>
+	<!-- ex04.jsp -->
+	<h1>Ajax</h1>
+	
+	<!--  
+		1. GET
+		- 주고 + 받기
+	-->
+	<div>
+		<div><input type="text" id="txt1"></div>
+		<div><input type="button" value="확인" id="btn1"></div>
+		<div id="div1"></div>
+	</div>
+	
+	<hr>
+	
+	<!--  
+		2. GET
+		- 주기
+	-->
+	<div>
+		<div><input type="text" id="txt2"></div>
+		<div><input type="button" value="확인" id="btn2"></div>
+	</div>
+	
+	<hr>
+	
+	<!--  
+		3. GET
+		- 받기
+	-->
+	<div>
+		<div><input type="text" id="txt1"></div>
+		<div><input type="button" value="확인" id="btn3"></div>
+		<div id="div3"></div>
+	</div>
+	
+	<!--  
+		4. POST
+		- 주고 + 받기
+	-->
+	<div>
+		<div><input type="text" id="txt1"></div>
+		<div><input type="button" value="확인" id="btn3"></div>
+		<div id="div4"></div>
+	</div>
+	
+	<hr>
+	
+	<hr>
+	
+	<div><input type="text"></div>
+	
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+	
+		$('#btn1').click(()=>{
+			
+			const ajax = new XMLHttpRequest();
+			
+			ajax.onreadystatechange = function(evt) {
+				if (ajax.readyState == 4 && ajax.status == 200) {
+					
+					$('#div1').text(ajax.responseText); //보낸 문자열의 글자수
+					
+				}
+			};
+			
+			//GET 호출 + 데이터 전송 = Query String
+			ajax.open('GET', '/ajax/ex04data.do?txt1=' + $('#txt1').val());
+			
+			ajax.send();
+			
+		});
+		
+		$('#btn2').click(() => {
+			
+			const ajax = new XMLHttpRequest();
+			
+			//onreadystatechange > 데이터 수신할 때 사용
+			
+			ajax.open('GET', '/ajax/ex04data.do?txt2=' + $('#txt2').val());
+			
+			ajax.send();
+			
+		});
+		
+		$('#btn3').click(() => {
+			
+			ajax.onreadystatechange = function(){
+				if(ajax.readyState == 4 && ajax.status == 200){
+					$('#div3').text(ajax.responseText);
+				}
+			}
+			
+			ajax.open('GET', '/ajax/ex04data.do');
+			
+			ajax.send();
+		});
+		
+		
+		$('#btn4').click(()=>{
+			
+			const ajax = new XMLHttpRequest();
+			
+		});
+	
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

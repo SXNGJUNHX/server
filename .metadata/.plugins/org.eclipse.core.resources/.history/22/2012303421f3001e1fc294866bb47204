@@ -1,0 +1,14 @@
+package com.test.todo.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.test.todo.model.TodoDAO;
+
+class DAOTest {
+
+	void testAddTodo() {
+		TodoDAO dao = new TodoDAO();
+	}
+}

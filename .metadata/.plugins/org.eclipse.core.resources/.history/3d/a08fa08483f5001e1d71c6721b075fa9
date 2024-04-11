@@ -1,0 +1,22 @@
+package com.test.api.map;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Add extends HttpServlet{
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//1. 데이터 가져오기(lat, lng)
+		//2. DB작업 > insert
+		//3. 이동
+		
+		
+		
+	}
+}

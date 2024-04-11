@@ -1,0 +1,16 @@
+package com.test.crawl;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		
+		try {
+			
+			String url = "https://www.moviechart.co.kr/rank/boxoffice";
+			
+		} catch (Exception e) {
+			System.out.println("Ex02.main");
+			e.printStackTrace();
+		}
+	}
+}

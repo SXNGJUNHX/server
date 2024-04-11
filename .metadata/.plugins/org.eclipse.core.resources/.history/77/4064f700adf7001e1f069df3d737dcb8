@@ -1,0 +1,30 @@
+package com.test.ajax;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.test.ajax.model.AjaxDAO;
+import com.test.ajax.model.ZipcodeDTO;
+
+public class Ex08Data extends HttpServlet{
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		req.setCharacterEncoding("UTF-8");
+		
+		String dong = req.getParameter("dong");
+		
+		AjaxDAO dao = new AjaxDAO();
+		
+		ArrayList<ZipcodeDTO> list = dao.searchZipcose(dong);
+		
+	}
+	
+}

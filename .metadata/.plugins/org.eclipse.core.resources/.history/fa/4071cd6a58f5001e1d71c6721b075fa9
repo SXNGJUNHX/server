@@ -1,0 +1,12 @@
+네이버 개발자 센터
+
+- "com.test.api" > "Ex01.java"
+
+- WEB-INF > "views" > "ex01.jsp"
+
+
+- lib > jstl, lombok
+
+
+JSON 표기법
+- 대부분은 JavaSript 객체 리터럴과 동일하다.

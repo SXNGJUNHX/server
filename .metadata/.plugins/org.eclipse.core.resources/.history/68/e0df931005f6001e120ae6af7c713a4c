@@ -1,0 +1,68 @@
+네이버 개발자 센터
+
+- "com.test.api" > "Ex01.java"
+
+- WEB-INF > "views" > "ex01.jsp"
+
+
+- lib > jstl, lombok
+
+
+JSON 표기법
+- 대부분은 JavaSript 객체 리터럴과 동일하다
+- 프로퍼티명은 반드시 ""로 묶는다
+- 따옴표는 반드시 쌍따옴표를 사용한다
+- 프로퍼티 함수를 가질 수 없다 > 데이터 저장용 or 전달용
+
+const obj={
+	name: "홍길동",
+	age: 20,
+	address: "서울시"
+};
+
+//JSON
+{
+	"name": "홍길동",
+	"age": 20,
+	"address": "서울시"
+{
+
+
+
+
+
+
+지도 Open API
+- Google Map
+- Naver Map
+- Kakao Map
+
+- "com.test.api.map" > "Ex01.java"
+					 > "Add.java"
+- "views" > "map" > "ex01.jsp"
+				  > "ex02.jsp"
+				  > "ex03.jsp"
+				  > "ex04.jsp" > 읽기
+				  > "ex05.jsp" > 쓰기
+				  
+				  
+- OpenAPITest > "script.sql"
+
+- com.test.api.model > "MapDAO.java"
+					 > "MarkerDTO.java"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

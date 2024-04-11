@@ -1,0 +1,68 @@
+메모장 프로젝트(JSP Model 1 + JDBC)
+- JSP Model 1 > JSP(HTML + Java)
+
+1. 새 프로젝트
+- New > Dynamic Web Project > "Memo" > Context Root("memo"), web.xml 체크(O)
+
+2. 구현 업무
+- 메모 CRUD
+- 권한 확인 > 작성자 확인 > 수정 or 삭제
+          > 모든 유저 > 쓰기 or 읽기
+
+3. DB
+- Memo > "script.sql"
+          
+
+4. 페이지 설계
+- 목록보기: 	webapp > "list.jsp"
+- 쓰기: 		webapp > "add.jsp", "addok.jsp"
+- 수정하기: 	webapp > "edit.jsp", "editok.jsp"
+- 삭제하기: 	webapp > "del.jsp", "delok.jsp"
+- 템플릿:		webapp > "template.jsp"
+- 조각페이지: webapp > "inc" > "header.jsp"
+                           > "asset.jsp"
+- 리소스: 	webapp > "asset" > "css" > "main.css"
+                             > "js" > "main.js"
+                             > "images" x
+                             
+                             
+ 5. 라이브러리 추가
+ - JSTL > jstl-1.2.jar
+ - JDBC > util.jar
+ 
+ 
+ 6. 클래스 추가
+ - src/main/java > "com.test.memo" > "MemoDAO.java", "MemoDTO.java" 
+                             
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+package com.test.todo.test;
+
+public class TodoDAOTest {
+	
+	public static void main(String[] args) {
+		
+		TodoDao dao = new TodoDao();
+		
+		int result = dao.add("할일입니다.");
+		
+		System.out.println(result);
+		
+	}
+}

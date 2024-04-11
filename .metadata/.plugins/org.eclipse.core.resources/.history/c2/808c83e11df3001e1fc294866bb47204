@@ -1,0 +1,16 @@
+- TodoList > "script.sql"
+
+- lib > ojdbc8.jar
+	  > jstl-1.2.jar
+	  > lombok.jar
+	  > util.jar
+	  
+- "com.test.todo" > "Main.java"
+				  > "AddOk.java"
+				  > "ChechOk.java"
+				  > "DelOk.java"
+
+- "WEB-INF" > "views" > "main.jsp"
+					  > "addok.jsp"
+					  > "checkok.jsp"
+					  > "delok.jsp"

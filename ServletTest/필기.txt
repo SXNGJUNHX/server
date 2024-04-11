@@ -1,0 +1,137 @@
+1. 워크스페이스
+- C:\class\code\server
+
+2. 프로그램 확인(dev)
+- Eclipse 2022-06 > eclipse.ini
+- Tomcat 8.5.XX
+- JDK 11
+- Oracle ex 21c
+
+3. 이클립스 설정
+- encoding
+   - Workspace > UTF-8
+   - CSS Files > UTF-8
+   - HTML Files > UTF-8
+   - JSP Files > UTF-8
+- server
+   - Tomcat 등록
+- Servers
+   - Tomcat 객체 생성 
+   - 포트번호 > 8090
+
+프로젝트 생성
+- New > Dynamic Web Project
+  > Project name: "ServletTest"
+  > Target runtime: Tomcat v8.5
+   > module: 3.1
+  > web.xml 체크(O)
+
+
+웹사이트 구축
+- Client + Server
+
+서버측 + 웹 기술
+- Servlet
+- JSP
+- Spring
+-------------
+데이터베이스 연동
+- JDBC
+- MyBatis
+- Spring JDBC
+- JPA
+
+웹 페이지
+1. 정적 페이지 > 요청때마다 소스가 변함없는 페이지
+2. 동적 페이지 > 요청때마다 소스가 변함있는 페이지
+
+
+Servlet, 서블릿
+- 웹서버에서 자바를 사용한 프로그램을 동작시키는 기술
+- 프로그램의 역할 > 웹 페이지 생성
+- 웹 서버측에서 동적으로 웹 페이지를 생산하는 기술
+
+
+Servlet Class
+- 바리스타(알바생)
+- 클라이언트 요청에 따라 동적으로 웹 페이지를 생산하는 클래스
+
+
+Servlet/JSP Container <== Servet/JSP Engine
+- 서버측에서 Servlet/JSP를 실행할 수 있도록 해주는 환경
+- Serevlet/JSP와 관련된 객체 생성, 실행, 소멸 등.. 전반적인 관리
+- 대표 컨테이너 > 톰캣(Tomcat)
+
+
+Servlet Class 작성 규칙 > 알바생 생성
+1. 서블릿 클래스 선언 > 순수 자바(X), 서블릿 API 사용(O)
+	a. javax.servlet.Servlet 인터페이스를 구현 > 복잡함, 고비용
+	b. java.servlet.http.HttpServlet 클래스를 상속받는다 > 단순함, 저비용
+	
+	
+2. doGet/doPost 메소드 선언
+	- 둘 중 하나 선언 or 둘다 선언
+	- 클라이언트(브라우저)의 요청이 들어오면 자동으로 호출되는 메소드 > "주문"
+	- 커피 만드는 메소드 > HTML 페이지를 만드는 메소드
+	- 메소드 작성 규칙
+		a. 매개 변수 작성
+			(1). java.servlet.http.HttpServletRequest
+			(2). java.servlet.http.HttpServletResponse		
+
+		b. 예외 미루기
+			(1). java.io.IOException
+			(2). java.servlet.ServletExeption
+	
+
+3. 동적 HTML 페이지 작성
+	- doGet/doPost 내부에서 HTML 문서를 작성하기 위한 자바 코드를 작성(개발자) > 미리 계획을 작성
+	- HttpServletResponse 객체의 getWriter() 메소드 호출 > PrintWriter 객체반환
+	- PrintWirter 객체 == 페이지를 제작하는 도구
+	- printXXX("페이지 태그 or 내용"); > 동적으로 페이지 제작
+	- 페이지 완성 > 브라우저에게 반환
+	
+4. 서블릿 호출 
+	- 순수 자바는 웹 기술이 아니다 > 웹에서는 자바 프로그램을 호출할 수 없다
+	- 톰캣이 그 요청을 받아서 대신 프로그램을 호출한다(Servlet Container)
+	- 자바 프로그램을 호출하기 위한 가상 주소를 생성
+	- webapp > WEB-INF > web.xml(톰캣 환경 설정 파일)
+
+
+
+- Java Resources > src/main/java > "com.test.servlet"패키지 > "Ex01.java"
+
+
+
+
+데이터 주고 받기
+- 폼(<fome>) > 전송 > 서버(수신)
+
+- Ex03_Send.java
+- Ex03_Receive.java
+
+
+
+
+
+
+Servlet == JSP
+- JSP는 Servlet이다
+- Servlet > 자바 기반 + 클라이언트 (문자열 취급)
+- JSP > HTML기반 + 자바 코드
+
+
+1. Servlet
+2. JSP
+3. Servlet + JSP 
+
+
+
+
+
+
+
+
+
+
+
+

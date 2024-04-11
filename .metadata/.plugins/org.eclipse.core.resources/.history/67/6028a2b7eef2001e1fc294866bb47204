@@ -1,0 +1,20 @@
+package com.test.crawl;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		
+		try {
+			
+			Document doc = Jsoup.connect("http://localhost:8090/CrawlingTest/ex05.jsp");
+					
+			
+		} catch (Exception e) {
+			System.out.println("Ex03.main");
+			e.printStackTrace();
+		}
+	}
+}
