@@ -16,7 +16,7 @@
 	#list td { text-align: center; }
 	#list td:nth-child(5) { text-align: left; }
 	
-	#list span{
+	#list span {
 		font-size: 1.4rem;
 		cursor: pointer;
 		float: right;
@@ -46,7 +46,8 @@
 				<td>${dto.gender == 'm' ? '남자' : '여자'}</td>
 				<td>
 					${dto.address}
-					<span>&times;</span>
+					<span onclick="edit();">edit</span>
+					<span onclick="del(${dto.seq});">&times;</span>
 				</td>
 			</tr>
 			</c:forEach>
@@ -80,7 +81,7 @@
 	
 	<hr>
 	
-	<h1>데이터 전송하기</h1>
+	<!-- <h1>데이터 전송하기</h1>
 	
 	<form id="form1">
 	<table class="vertical">
@@ -100,10 +101,11 @@
 	<div>
 		<input type="button" value="보내기" id="btn1">
 	</div>
-	</form>
+	</form> -->
 	
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="http://pinnpublic.dothome.co.kr/cdn/example-min.js"></script>
 	<script>
 	
 		$('#btn1').click(() => {
@@ -160,11 +162,14 @@
 						$('#list tbody').append(`
 						
 							<tr>
-								<td>\${}</td>
+								<td>\${result.seq}</td>
 								<td>\${$('#name').val()}</td>
 								<td>\${$('#age').val()}</td>
 								<td>\${$('#gender').val() == 'm' ? '남자' : '여자'}</td>
-								<td>\${$('#address').val()}</td>
+								<td>
+									\${$('#address').val()}
+									<span onclick="del(\${result.seq});">&times;</span>
+								</td>
 							</tr>
 								
 						`);
@@ -193,6 +198,55 @@
 				$('#address').blur();
 			}
 		});
+		
+		function del(seq) {
+			//alert(seq);
+			
+			//lert(this); //<span>
+			let tr = $(event.target).parent().parent();
+			console.log(event.target);
+			
+			$.ajax({
+				type: 'POST',
+				url: '/ajax/ex10del.do',
+				data: 'seq=' + seq,
+				dataType: 'json',
+				success: function(result) {
+					
+					if (result.result == '1') {
+						
+						//삭제 성공 > tr 삭제
+						//console.log(this);
+						//$(this).parent().parent().remove();
+						console.log(tr);
+						tr.remove();
+						
+					} else {
+						alert('failed');
+					}
+					
+				},
+				error: function(a,b,c) {
+					console.log(a,b,c);
+				}
+			});
+			
+		}
+		
+		function edit() {
+			
+			const td2 = $(event.target).parent().parent().children().eq(1);
+			const name = td2.text();
+			//alert(name);
+			
+			td2.html('<input type="text" class="short" value="' + name + '">');
+			
+			const td3 = $(event.target).parent().parent().children().eq(2);
+			const age = td3.text();
+			
+			td3.html('<input type="text" class="short" value="' + age + '">');
+			
+		}
 	
 	</script>
 </body>
