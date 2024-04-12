@@ -23,7 +23,7 @@
 	</div>
 	<div class="message">&nbsp;</div>
 	
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=aee9a65a1b49a897184f218db1f2b195"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=aee9a65a1b49a897184f218db1f2b195&libraries=services"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script>
 	

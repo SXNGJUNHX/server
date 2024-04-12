@@ -1,6 +1,0 @@
-- TodoList > "script.sql"
-
-- lib > ojdbc8.jar
-	  > jstl-1.2.jar
-	  > lombok.jar
-	  > util.jar

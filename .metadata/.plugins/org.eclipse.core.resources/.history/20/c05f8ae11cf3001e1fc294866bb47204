@@ -1,8 +1,0 @@
-package com.test.todo;
-
-import javax.servlet.http.HttpServlet;
-
-public class Addok extends HttpServlet{
-
-	
-}

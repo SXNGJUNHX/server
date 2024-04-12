@@ -1,0 +1,65 @@
+새 프로젝트
+
+- "Place" + "place"
+
+- lib > ojdbc.jar
+	  > util.jar
+	  > jstl.jar
+	  > lombok.jar
+	  > json-simple
+
+- Place > "script.sql"
+- webapp > marker 복사
+
+패키지
+1. 일반 페이지(Servlet + JSP)
+	- "com.test.place" 
+		- "Index.java"
+	
+2. Ajax 처리용(Servlet)
+	- "com.test.place.data"
+		- "AddPlace.java"
+		- "ListPlace.java"
+		- "DelPlace.java"
+	
+3. DB
+	- "com.test.place.model"
+		- "PlaceDAO.java"
+		- "CategoryDTO.java"
+		- "PlaceDTO.java"
+		
+폴더
+
+1. JSP
+	- WEB-INF > "views"
+					- "index.jsp"
+					
+	
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	  
