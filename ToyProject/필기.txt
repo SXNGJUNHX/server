@@ -88,6 +88,9 @@
 			- "BoardDAO.java"
 		- "com.test.toy.board.model"
 			- "BoardDTO.java"
+			- "CommentDTO.java"
+		- "com.test.toy.board.data"
+			- "AddComment.java"
 	- 페이지
 		- views > "board"
 					- "list.jsp"

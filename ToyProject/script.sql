@@ -74,9 +74,17 @@ where seq = 6;
 
 
 --댓글 테이블
+create table tblComment(
+    seq number primary key,                             --번호(pk)
+    content varchar2(2000) not null,                    --댓글
+    id varchar2(50) not null references tblUser(id),    --아이디(FK)
+    regdate date default sysdate not null,              -- 작성날짜
+    bseq number not null references tblBoard(seq)       -- 부모글(FK)
+);
 
+create sequence seqComment;
 
-
+select * from tblComment;
 commit;
 
 

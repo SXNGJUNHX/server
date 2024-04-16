@@ -78,6 +78,15 @@
 
 
 
+/* 댓글 */
+#comment td:nth-child(1) { width: auto;}
+#comment td:nth-child(2) { width: 150px; text-align: center;}
+#comment .commentContent div:list-child { font-size: 12px; text-align: right;}
+
+
+#addComment td:nth-child(1){ width: auto;}
+#addComment td:nth-child(2){ width: 150px; text-align: center;}
+
 
 
 

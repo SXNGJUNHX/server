@@ -1,5 +1,0 @@
-
-- "com.test.ajax"
-- "com.test.ajax.model" > "AjaxDAO.java"
-- WEB-INF > "views"
-- WEB-INF > lib > objdbc.jar, util.jar, jstl.jar, lombok.jar, json-simple.jar

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.test.toy.board.model.BoardDTO;
+import com.test.toy.board.model.CommentDTO;
 import com.test.util.DBUtil;
 
 public class BoardDAO {
@@ -206,7 +207,47 @@ public class BoardDAO {
 		return 0;
 	}
 
+	public int addComment(CommentDTO dto) {
+		
+		//queryParamNoReturn
+		try {
+
+			String sql = "insert into tblComment (seq, content, id, regdate, bseq) values (seqComment.nextVal, ?, ?, default, ?)";
+
+			pstat = conn.prepareStatement(sql);
+			pstat.setString(1, dto.getContent());
+			pstat.setString(2, dto.getId());
+			pstat.setString(3, dto.getBseq());
+
+			return pstat.executeUpdate();
+
+		} catch (Exception e) {
+			System.out.println("BoardDAO.addComment");
+			e.printStackTrace();
+		}
+		
+		return 0;
+	}
+
+
 
 }
 	
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
