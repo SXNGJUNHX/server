@@ -82,6 +82,8 @@
 			- "Add.java"
 			- "Edit.java"
 			- "Del.java"
+			- "Auth.java"
+			- "Dummy.java"
 		- "com.test.toy.board.repository"
 			- "BoardDAO.java"
 		- "com.test.toy.board.model"
@@ -97,6 +99,7 @@
 	- 패키지
 		- "com.test.toy.filter"
 			- "EncodingFilter.java"
+			- "AuthFilter.java"
 	
 
 
@@ -129,6 +132,12 @@ queryParamListReturn
 
 
 
+
+게시판 검색
+
+
+
+페이징
 
 
 

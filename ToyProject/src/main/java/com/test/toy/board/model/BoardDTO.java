@@ -1,5 +1,7 @@
 package com.test.toy.board.model;
 
+import com.test.toy.board.repository.BoardDAO;
+
 import lombok.Data;
 
 @Data

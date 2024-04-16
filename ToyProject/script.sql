@@ -58,16 +58,24 @@ select seq, subject, id, readcount, (select name from tblUser where id = tblBoar
             else 
                 to_char(regdate, 'yyyy-mm-dd')
         end regdate,
-        (sysdate - regdate) as isnew
+        (sysdate - regdate) as isnew,
+        content
 from tblBoard 
 order by seq desc;
 
 
-select * from vwBoard;
+select * from (select a.*, rownum as rnum from vwBoard a)
+    where rnum between 1 and 10;
 
 update tblBoard set
 regdate = regdate - 1
 where seq = 6;
+
+
+
+--댓글 테이블
+
+
 
 commit;
 

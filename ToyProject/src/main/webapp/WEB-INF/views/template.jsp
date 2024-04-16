@@ -16,7 +16,7 @@
 	
 	<div id="main">
 		
-		<h1>콘텐츠제목 <small>부제</small></h1>
+		<h1 class="sub">콘텐츠제목 <small>부제</small></h1>
 		내용
 		
 	</div>
