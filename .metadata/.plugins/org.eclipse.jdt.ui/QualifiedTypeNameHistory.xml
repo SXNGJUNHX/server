@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.test.util.MyUtil"/>
-    <fullyQualifiedTypeName name="javax.servlet.jsp.PageContext"/>
     <fullyQualifiedTypeName name="com.test.doto.test.TodoDAOTest"/>
     <fullyQualifiedTypeName name="org.junit.Ignore"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Disabled"/>
@@ -10,7 +8,6 @@
     <fullyQualifiedTypeName name="com.test.todo.model.TodoDAO"/>
     <fullyQualifiedTypeName name="java.net.URLEncoder"/>
     <fullyQualifiedTypeName name="java.net.URL"/>
-    <fullyQualifiedTypeName name="org.apache.tomcat.util.json.JSONParser"/>
     <fullyQualifiedTypeName name="org.json.simple.parser.JSONParser"/>
     <fullyQualifiedTypeName name="com.test.api.model.BookDTO"/>
     <fullyQualifiedTypeName name="javax.net.ssl.HttpsURLConnection"/>
@@ -24,7 +21,6 @@
     <fullyQualifiedTypeName name="com.test.ajax.model.ZipcodeDTO"/>
     <fullyQualifiedTypeName name="com.test.ajax.model.CatDTO"/>
     <fullyQualifiedTypeName name="com.test.ajax.model.AddressDTO"/>
-    <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
     <fullyQualifiedTypeName name="com.test.ajax.model.AjaxDAO"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
@@ -32,7 +28,6 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="com.test.place.model.CategoryDTO"/>
     <fullyQualifiedTypeName name="org.eclipse.jdt.internal.compiler.lookup.AptBinaryLocalVariableBinding"/>
-    <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
     <fullyQualifiedTypeName name="com.test.place.model.PlaceDTO"/>
     <fullyQualifiedTypeName name="com.test.place.model.PlaceDAO"/>
     <fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
@@ -50,7 +45,6 @@
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="com.test.util.OutputUtil"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="com.test.util.DBUtil"/>
     <fullyQualifiedTypeName name="oracle.net.aso.l"/>
@@ -60,4 +54,10 @@
     <fullyQualifiedTypeName name="com.test.toy.board.repository.BoardDAO"/>
     <fullyQualifiedTypeName name="com.test.toy.board.model.CommentDTO"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="com.drew.imaging.ImageMetadataReader"/>
+    <fullyQualifiedTypeName name="com.drew.metadata.exif.GpsDirectory"/>
+    <fullyQualifiedTypeName name="org.apache.tomcat.util.json.JSONParser"/>
+    <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
+    <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>
