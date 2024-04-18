@@ -1,8 +1,0 @@
-package com.test.ajax.model;
-
-public class CatDTO {
-
-	private String catid;
-	private String x;
-	private String y;
-}

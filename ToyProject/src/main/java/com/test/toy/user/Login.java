@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.test.toy.user.model.LogDTO;
 import com.test.toy.user.model.UserDTO;
 import com.test.toy.user.repository.UserDAO;
 import com.test.util.OutputUtil;
@@ -57,6 +58,13 @@ public class Login extends HttpServlet {
 			
 			session.setAttribute("name", result.getName());
 			session.setAttribute("lv", result.getLv());
+			
+			//접속기록 추가하기
+			LogDTO ldto = new LogDTO();
+			ldto.setId(id);
+			
+			dao.addLog(ldto);
+			
 						
 			resp.sendRedirect("/toy/index.do");
 			

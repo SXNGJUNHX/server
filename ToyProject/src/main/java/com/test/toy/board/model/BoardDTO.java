@@ -1,5 +1,7 @@
 package com.test.toy.board.model;
 
+import java.util.ArrayList;
+
 import com.test.toy.board.repository.BoardDAO;
 
 import lombok.Data;
@@ -23,5 +25,9 @@ public class BoardDTO {
 	private int depth;	//답변형
 	
 	private String attach; //첨부파일
+	
+	private ArrayList<String> tag; //해쉬태그
+	
+	private String secret;
 	
 }

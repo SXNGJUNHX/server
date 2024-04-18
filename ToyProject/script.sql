@@ -46,7 +46,6 @@ create table tblBoard (
 drop sequence seqBoard;
 create sequence seqBoard;
 
-select * from tblBoard;
 
 
 create or replace view vwBoard
@@ -61,7 +60,8 @@ select seq, subject, id, readcount, (select name from tblUser where id = tblBoar
         (sysdate - regdate) as isnew,
         content,
         (select count(*) from tblComment where bseq = tblBoard.seq) as commentCount,
-        depth
+        depth,
+        secret
 from tblBoard 
 order by thread desc;
 
@@ -84,7 +84,6 @@ create table tblComment(
     bseq number not null references tblBoard(seq)       -- 부모글(FK)
 );
 
-select * from tblComment;
 
 drop sequence seqBoard;
 create sequence seqBoard;
@@ -94,13 +93,7 @@ create sequence seqComment;
 select a.*, (select name from tblUser where id = a.id) as name from tblComment a;
 select * from (select b.*, rownum as rnum from (select a.*, (select name from tblUser where id = a.id) as name from tblComment a where bseq = 5 order by seq desc) b) where rnum between 1 and 10; 
 
-select * from tblComment;
 
-
-drop table tblComment;
-drop table tblBoard;
-
---게시판 + 답변
 create table tblBoard (
     seq number primary key,
     subject varchar2(300) not null,
@@ -156,6 +149,74 @@ create sequence seqTagging;
 select * from tblTagging;
 
 
+select h.tag from tblBoard b
+    inner join tblTagging t
+     on b.seq = t.bseq
+        inner join tblHashtag h
+            on h.seq = t.hseq
+                where b.seq = 22;
+                
+                
+select * from (select a.*, rownum as rnum from vwBoard a %s) b
+    inner join tblTagging t
+        on b.seq = t.bseq
+            inner join tblHashtag h
+                on h.seq = t.hseq
+                     where rnum between %s and %s and h.tag = %s;
+                     
+                     
+delete from tblTagging
+    where bseq = ? and hseq = (select seq from tblHashtag where tag = ?);
+    
+    
+    
+drop table tblComment;
+drop table tblTagging;
+drop table tblBoard;
+
+--게시판 + 답변 + 첨부파일
+create table tblBoard (
+    seq number primary key,
+    subject varchar2(300) not null,
+    content varchar2(4000) not null,
+    id varchar2(50) not null references tblUser(id),
+    regdate date default sysdate not null,
+    readcount number default 0 not null,
+    thread number not null,                             --답변형(정렬)
+    depth number not null,      --답변형(출력)
+    attach varchar2(100) null,  --첨부파일
+    secret number(1) not null   -- 비밀글(0-공개, 1-비밀)
+);
+
+--접속 기록
+create table tblLog(
+    seq number primary key,                         -- 번호
+    id varchar2(50) not null references tblUser(id),-- 아이디(FK)
+    regdate date default sysdate not null           --접속시각
+);
+
+create sequence seqLog;
+
+delete from tblLog;
+delete from tblBoard;
+
+
+select count(*) from tblLog; -- 75
+select count(*) from tblBoard; --244
+select * from tblComment;
+
+select count(*) from tblBoard b
+     inner join tblLog l 
+        on to_char(b.regdate, 'yyyy-mm-dd') = to_char(l.regdate, 'yyyy-mm-dd');
+
+
+--한달간 > 로그인 날짜, 글쓴 횟수, 댓글쓴 횟수
+select to_char(regdate, 'yyyy-mm-dd') as regdate, count(*) as cnt,
+    (select count(*) from tblBoard where to_char(regdate, 'yyyy-mm-dd') = to_char(a.regdate, 'yyyy-mm-dd')) as bcnt,
+    (select count(*) from tblComment where to_char(regdate, 'yyyy-mm-dd') = to_char(a.regdate, 'yyyy-mm-dd')) as ccnt
+from tblLog a
+where to_char(regdate, 'yyyy-mm') = ?
+group by to_char(regdate, 'yyyy-mm-dd');
 
 commit;
 

@@ -1,7 +1,0 @@
-package com.test.ajax;
-
-import javax.servlet.http.HttpServlet;
-
-public class Ex08Data extends HttpServlet{
-
-}
